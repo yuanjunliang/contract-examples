@@ -13,3 +13,7 @@ artifacts
 lib/
 out/
 cache_forge/
+
+# remix
+.deps/
+remix-ide/
