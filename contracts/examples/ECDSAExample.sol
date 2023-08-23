@@ -23,4 +23,13 @@ contract ECDSAExample {
         address signer = ECDSA.recover(messageHash, v, r, s);
         return signer == msg.sender;
     }
+
+    // recover messages whitout prefix: "\x19Ethereum Signed Message:\n32"
+    function verifyWithoutPrefix(
+        bytes32 hash,
+        bytes calldata signature
+    ) public view returns (bool) {
+        address signer = ECDSA.recover(hash, signature);
+        return signer == msg.sender;
+    }
 }

@@ -10,5 +10,6 @@
     "paths": {
       "@contracts/": ["contracts/*"]
     }
-  }
+  },
+  "include": ["hardhat.config.ts", "./scripts", "./tasks", "./test"]
 }
